@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Styleguide js running!");
 
     const templateImports = document.querySelectorAll('link[rel="import"]');
-
-    console.log(templateImports)
     
     templateImports.forEach(element => {
         debugger
