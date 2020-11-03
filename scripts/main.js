@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false)
 
 function importHtmlTemplates() {
-    const templateImports = document.querySelectorAll('link[rel="import"]');
+    const templateImports = document.querySelectorAll('link[id$="-template"]');
     
     templateImports.forEach(element => {
 
@@ -19,9 +19,9 @@ function importHtmlTemplates() {
 }
 
 function injectHtmlSnippets() {
-    const templateImports = document.querySelectorAll('link[id$="-snippet"]');
+    const snippetsImports = document.querySelectorAll('link[id$="-snippet"]');
     
-    templateImports.forEach(element => {
+    snippetsImports.forEach(element => {
         const template = element.import.querySelector('template');
         const clone = document.importNode(template.content, true);
         console.log(clone)
