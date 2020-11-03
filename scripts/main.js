@@ -1,14 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Styleguide js running!");
 
-    var injectionPoint = document.getElementById('buttons-template-injection-point')
+    const templateImports = document.querySelectorAll('link[rel="import"]');
 
-    var xhr = new XMLHttpRequest();
-    xhr.onload= function() {
-        injectionPoint.innerHTML = this.response;
-    }
+    console.log(templateImports)
+    
+    templateImports.forEach(element => {
+        debugger
+        const template = element.import.querySelector('template');
+        const clone = document.importNode(template.content, true);
 
-    xhr.open('GET', 'components/buttons.html', true);
-    xhr.onreadystatechange = 'components/buttons.html';
-    xhr.send()
+        document.querySelector(`section[data-template=${element.id}`).appendChild(clone)
+    })
+    // const link = document.getElementById('btn-template-link');
+    // const template = link.import.querySelector('template');
+    // const clone = document.importNode(template.content, true);
+
+    // document.getElementById('buttons-section').appendChild(clone)
+
 }, false)
