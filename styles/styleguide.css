@@ -21,10 +21,10 @@ body {
     overflow: auto;
 }
 
-.flex-box-row:first-child {
+.flex-box-row figure {
     width: 60%;
 }
 
-.flex-box-row:last-child {
+.flex-box-row iframe {
     width: 40%;
 }
