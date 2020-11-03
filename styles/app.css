@@ -1,0 +1,26 @@
+@import "buttons.css";
+@import "forms.css";
+@import "styleguide.css";
+@import "variables.css";
+
+body {
+    font-family: var(--globalFontFamily);
+    font-size: var(--mediumFontSize);
+    line-height: var(--mediumLineHeigth);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, legend, title {
+    color: var(--grey);
+    line-height: 110%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+legend {
+    padding: 0;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 25px;    
+}

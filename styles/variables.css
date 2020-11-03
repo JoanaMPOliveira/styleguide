@@ -1,0 +1,29 @@
+:root {
+    --globalFontFamily: 'Roboto', sans-serif;
+
+    --mediumFontSize: 14px;
+
+    --baseHorizontalMargin: 15px;
+    --baseVerticalMargin: 30px;
+    --smallVerticalMargin: calc(var(--baseVerticalMargin) / 2);
+
+    --mediumLineHeigth: 16px;
+    --formRowHeight: 30px;
+    --formControlElementWidth: calc(100% / 12 * 7);
+    --labelWidth: calc(100% / 12 * 3);
+
+    --white: #ffffff;
+    --greyBackground: #f2f2f2;
+    --greyStructureColor: #999999;
+    --grey: #808080;
+
+    --mainColor: #00A1E4;
+    --secondColor: #00A99D;
+
+    --brandLinearGradient: -webkit-linear-gradient(left, var(--mainColor) 0, var(--secondColor) 100%);
+    --greyLinearGradient: -webkit-linear-gradient(left, var(--greyStructureColor), var(--greyStructureColor));
+
+    --boxShadowInputs: 0 0 6px rgba(0, 0, 0, 0.4);
+    --boxShadowInputsFocus: 0 0 8px 2px var(--secondColor);
+    --boxShadowButtons: 0 0 3px rgba(0, 0, 0, 0.25);
+}

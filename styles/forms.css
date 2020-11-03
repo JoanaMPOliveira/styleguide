@@ -1,0 +1,150 @@
+form {
+    background-color: var(--greyBackground);
+    padding: 15px;
+}
+
+label {
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+fieldset {
+    margin-top: 50px;
+    position: relative;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+fieldset:not(:first-child) {
+    margin-top: 50px;
+}
+
+.row.control {
+    margin-top: var(--smallVerticalMargin);
+}
+.row.control:last-child {
+    margin-bottom: 15px;
+}
+.row.control.reverse-row {
+    display: block;
+    width:100%;
+    padding: 3px 0;
+}
+
+.row.control.reverse-row:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.row.control > label:first-child {
+    display: inline-block;
+    width: var(--labelWidth);
+    margin-top: 7px;
+    text-align: right;
+    padding-right: calc(100% / 24);
+    align-self: flex-start;
+}
+
+.controlgroup,
+.textinput-lookalike {
+    min-height: var(--formRowHeight);
+    width: var(--formControlElementWidth);
+}
+.row {
+   position: relative;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   flex-flow: row wrap;
+   -webkit-box-align: center;
+   align-items: center;
+}
+
+.row.buttons {
+    height: var(--formRowHeight);
+}
+
+.row.reverse-row input[type=checkbox] {
+    margin-left: 2%;
+}
+
+.row.reverse-row label {
+    text-align: left;
+    margin: auto;
+    letter-spacing: initial;
+}
+
+input, 
+textarea, 
+select,
+.textinput-lookalike {
+    box-shadow: none;
+    border: 2px solid var(--greyStructureColor);
+    padding: 1px 6px;
+    background: var(--white);
+    
+    transition: all 0.3s;
+}
+input, select {
+    height: var(--formRowHeight);
+    width: var(--formControlElementWidth);
+}
+
+input:disabled, 
+textarea:disabled, 
+select:disabled {
+    opacity: 0.5;
+    background: var(--white);
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+    outline: none;
+    border-image: var(--brandLinearGradient);
+    border-image-slice: 1;
+    box-shadow: var(--boxShadowInputs);
+}
+
+input[type=checkbox],
+input[type=radio] {
+    border: none;
+    border-radius: 0;
+    width: 14px !important;
+    height: 14px;
+    padding: 0;
+}
+
+input[type=checkbox] {
+    margin-right: 4px;
+}
+
+input[type=radio] {
+    margin-right: 2px;
+}
+
+input[type=radio]:focus {
+    border-radius: 10px;
+    box-shadow: var(--boxShadowInputsFocus);
+}
+
+select {
+    border-image: var(--greyLinearGradient);
+    border-image-slice: 1;
+}
+
+textarea {
+    min-height: var(--formRowHeight);
+    width: var(--formControlElementWidth);
+    line-height: 16px;
+    padding: 5px 5px;
+}
+textarea.textinput-lookalike {
+    resize: none;
+    width: var(--formControlElementWidth);
+    height: auto;
+    min-height: var(--formRowHeight);
+    background: var(--white);
+    display: inline-block;
+
+}
